@@ -6,45 +6,44 @@
 /*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:30:38 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/06 15:51:57 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:23:42 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::~PhoneBook(void){}
-PhoneBook::PhoneBook(void)
-{
-	index = 0;
-	count = 0;
+PhoneBook::~PhoneBook(){}
+PhoneBook::PhoneBook(){
+	_index = 0;
+	_count = 0;
 }
 
-void	PhoneBook::add_contact(){
-	if (count == 8)
+void	PhoneBook::addContact(){
+	if (_count == 8)
 	{
 		std::cout << "PhoneBook is full.\nThe new contact will replace the oldest one" << std::endl;
-		if (index > 7)
-			index = 0;
+		if (_index > 7)
+			_index = 0;
 	}
-	contacts[index].save_contact();
+	_contacts[_index].saveContact();
 	std::cout << "Contact has been saved" << std::endl;
-	if (count < 8)
-		count++;
-	index++;
+	if (_count < 8)
+		_count++;
+	_index++;
 }
 
-void	PhoneBook::search_contact(){
+void	PhoneBook::searchContact(){
 	int	i;
 	int	input_index;
 	std::string input;
 
-	if (count == 0)
+	if (_count == 0)
 		std::cout << "PhoneBook is empty" << std::endl;
-	else if (count != 0)
+	else if (_count != 0)
 	{
-		contacts->print_search(1, 0);
-		for (i = 0; i < count; i++)
-			contacts[i].print_search(0, i + 1);
+		_contacts->printSearch(1, 0);
+		for (i = 0; i < _count; i++)
+			_contacts[i].printSearch(0, i + 1);
 		while (1)
 		{
 			std::cout << "Choose contact index: ";
@@ -52,9 +51,9 @@ void	PhoneBook::search_contact(){
 			if (input[0] >= '1' && input[0] <= '8' && !input[1])
 			{
 				input_index = (input[0] - '1');
-				if (input_index < count)
+				if (input_index < _count)
 				{
-					contacts[input_index].print_contact();
+					_contacts[input_index].printContact();
 					break ;
 				}
 				else
@@ -66,7 +65,7 @@ void	PhoneBook::search_contact(){
 	}
 }
 
-void	PhoneBook::pb_software(){
+void	PhoneBook::pbSoftware(){
 	std::string	input;
 	
 	while (1)
@@ -81,12 +80,12 @@ void	PhoneBook::pb_software(){
 			break ;
 		if (input == "ADD")
 		{
-			add_contact();
+			addContact();
 			continue ;
 		}
 		if (input == "SEARCH")
 		{
-			search_contact();
+			searchContact();
 			continue ;
 		}
 		else

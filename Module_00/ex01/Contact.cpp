@@ -6,30 +6,30 @@
 /*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:51:26 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/06 15:27:25 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:21:42 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::~Contact(void){}
-Contact::Contact(void){
-	fields[0] = "First Name: ";
-	fields[1] = "Last Name: ";
-	fields[2] = "Nickname: ";
-	fields[3] = "Phone Number: ";
-	fields[4] = "Darket Secret: ";
+Contact::~Contact(){}
+Contact::Contact(){
+	_fields[0] = "First Name: ";
+	_fields[1] = "Last Name: ";
+	_fields[2] = "Nickname: ";
+	_fields[3] = "Phone Number: ";
+	_fields[4] = "Darket Secret: ";
 }
 
-void	Contact::save_contact(){
+void	Contact::saveContact(){
 	int			i;
 	int			j;
 
 	for (i = 0; i < 5; i++)
 	{
-		std::cout << fields[i];
-		std::getline(std::cin, data[i]);
-		if (data[i].empty())
+		std::cout << _fields[i];
+		std::getline(std::cin, _data[i]);
+		if (_data[i].empty())
 		{
 			std::cout << "Wrong input: Contact can’t have empty fields." << std::endl;
 			i--;
@@ -37,9 +37,9 @@ void	Contact::save_contact(){
 		}
 		if (i == 3)
 		{
-			for (j = 0; data[i][j]; j++)
+			for (j = 0; _data[i][j]; j++)
 			{
-				if (!(data[i][j] >= '0' && data[i][j] <= '9'))
+				if (!(_data[i][j] >= '0' && _data[i][j] <= '9'))
 				{
 					std::cout << "Wrong input: Phone Number must be a digit." << std::endl;
 					i--;
@@ -50,14 +50,14 @@ void	Contact::save_contact(){
 	}
 }
 
-void	Contact::print_contact(){
+void	Contact::printContact(){
 	int	i;
 
 	for (i = 0; i < 5; i++)
-		std::cout << fields[i] << data[i] << std::endl;
+		std::cout << _fields[i] << _data[i] << std::endl;
 }
 
-void	Contact::print_search(int flag, int index){
+void	Contact::printSearch(int flag, int index){
 	int	i;
 	int	j;
 	int	len;
@@ -76,17 +76,17 @@ void	Contact::print_search(int flag, int index){
 		for (i = 0; i < 3; i++)
 		{
 			std::cout << "|";
-			if (data[i].length() <= 10)
+			if (_data[i].length() <= 10)
 			{
-				for (len = 10 - data[i].length(); len > 0; len--)
+				for (len = 10 - _data[i].length(); len > 0; len--)
 					std::cout << " ";
-				for (j = 0; data[i][j]; j++)
-					std::cout << data[i][j];
+				for (j = 0; _data[i][j]; j++)
+					std::cout << _data[i][j];
 			}
-			if (data[i].length() > 10)
+			if (_data[i].length() > 10)
 			{
 				for (j = 0; j < 9; j++)
-					std::cout << data[i][j];
+					std::cout << _data[i][j];
 				if (j == 9)
 					std::cout << ".";
 			}

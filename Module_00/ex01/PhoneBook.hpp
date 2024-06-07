@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:20:51 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/06 13:30:41 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:22:09 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@
 
 class   PhoneBook{
 		private:
-				Contact	contacts[8];
-				int		index;
-				int		count;
+				Contact	_contacts[8];
+				int		_index;
+				int		_count;
 		public:
 				PhoneBook(void);
 				~PhoneBook(void);
-				void	pb_software(void);
-				void	add_contact(void);
-				void	search_contact(void);
+				void	pbSoftware(void);
+				void	addContact(void);
+				void	searchContact(void);
 };
 
 #endif

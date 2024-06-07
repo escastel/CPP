@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:25:27 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/06 15:08:13 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/06 18:36:35 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int	main(void)
 {
 	PhoneBook	agenda;
+
 	std::cout << "\n°•.•°¤*✬.•°°• WELCOME TO MY AWESOME PHONEBOOK °•°•.✬*¤°•.•°\n" << std::endl;
-	agenda.pb_software();
+	agenda.pbSoftware();
 	return (0);
 }
