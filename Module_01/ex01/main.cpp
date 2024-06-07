@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:11:12 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/07 18:15:42 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/07 18:17:36 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void){
 	int		i;
 
 	N = 6;
-	horde = zombieHorde(N, "Zara");
+	horde = zombieHorde(N, "Brayan");
 	for (i = 0; i < N; i++)
 		horde[i].announce();
 	delete[] horde;
