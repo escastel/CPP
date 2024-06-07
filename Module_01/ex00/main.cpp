@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:11:12 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/07 16:48:22 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/07 17:43:02 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 int	main(void){
 	Zombie z("Brayan");
+	Zombie*	newZ;
+
 	z.announce();
-
-	Zombie*	newZ = newZombie("Zara");
+	newZ = newZombie("Zara");
 	newZ->announce();
-
 	randomChump("Jony");
-	
 	delete newZ;
 }

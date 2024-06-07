@@ -6,13 +6,13 @@
 #    By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 17:03:36 by escastel          #+#    #+#              #
-#    Updated: 2024/06/07 16:47:43 by escastel         ###   ########.fr        #
+#    Updated: 2024/06/07 18:18:24 by escastel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombie
 
-FILES =  Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+FILES = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 OBJECTS = $(FILES:%.cpp=obj/%.o)
 
