@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:51:26 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/07 15:21:42 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/11 13:25:17 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ Contact::Contact(){
 }
 
 void	Contact::saveContact(){
-	int			i;
-	int			j;
 
-	for (i = 0; i < 5; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		std::cout << _fields[i];
 		std::getline(std::cin, _data[i]);
@@ -37,7 +35,7 @@ void	Contact::saveContact(){
 		}
 		if (i == 3)
 		{
-			for (j = 0; _data[i][j]; j++)
+			for (int j = 0; _data[i][j]; j++)
 			{
 				if (!(_data[i][j] >= '0' && _data[i][j] <= '9'))
 				{
@@ -51,16 +49,12 @@ void	Contact::saveContact(){
 }
 
 void	Contact::printContact(){
-	int	i;
-
-	for (i = 0; i < 5; i++)
+	for (int i = 0; i < 5; i++)
 		std::cout << _fields[i] << _data[i] << std::endl;
 }
 
 void	Contact::printSearch(int flag, int index){
-	int	i;
 	int	j;
-	int	len;
 
 	if (flag)
 	{
@@ -73,12 +67,12 @@ void	Contact::printSearch(int flag, int index){
 	{
 		std::cout << "|";
 		std::cout << "         " << index;
-		for (i = 0; i < 3; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			std::cout << "|";
 			if (_data[i].length() <= 10)
 			{
-				for (len = 10 - _data[i].length(); len > 0; len--)
+				for (int len = 10 - _data[i].length(); len > 0; len--)
 					std::cout << " ";
 				for (j = 0; _data[i][j]; j++)
 					std::cout << _data[i][j];

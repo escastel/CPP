@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:30:38 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/07 15:23:42 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/11 13:26:18 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ void	PhoneBook::addContact(){
 }
 
 void	PhoneBook::searchContact(){
-	int	i;
-	int	input_index;
 	std::string input;
 
 	if (_count == 0)
@@ -42,7 +40,7 @@ void	PhoneBook::searchContact(){
 	else if (_count != 0)
 	{
 		_contacts->printSearch(1, 0);
-		for (i = 0; i < _count; i++)
+		for (int i = 0; i < _count; i++)
 			_contacts[i].printSearch(0, i + 1);
 		while (1)
 		{
@@ -50,7 +48,7 @@ void	PhoneBook::searchContact(){
 			std::getline(std::cin, input);
 			if (input[0] >= '1' && input[0] <= '8' && !input[1])
 			{
-				input_index = (input[0] - '1');
+				int	input_index = (input[0] - '1');
 				if (input_index < _count)
 				{
 					_contacts[input_index].printContact();
