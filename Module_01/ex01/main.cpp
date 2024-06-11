@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:11:12 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/07 18:17:36 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/11 12:52:00 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	main(void){
 	Zombie*	horde;
-	int		N;
-	int		i;
 
-	N = 6;
-	horde = zombieHorde(N, "Brayan");
-	for (i = 0; i < N; i++)
+	horde = zombieHorde(6, "Brayan");
+	for (int i = 0; i < 6; i++)
 		horde[i].announce();
 	delete[] horde;
+	return 0;
 }

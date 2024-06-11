@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:11:12 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/07 18:31:43 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/10 16:36:12 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int	main(void){
 	std::cout << "Value\nstringSRC: " << stringSRC << std::endl;
 	std::cout << "stringPTR: " << *stringPTR << std::endl;
 	std::cout << "stringREF: " << stringREF << "\n" << std::endl;
+	return 0;
 }

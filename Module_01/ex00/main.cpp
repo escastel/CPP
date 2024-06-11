@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escastel <escastel@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:11:12 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/07 17:43:02 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/10 16:35:51 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ int	main(void){
 	newZ->announce();
 	randomChump("Jony");
 	delete newZ;
+	return 0;
 }
