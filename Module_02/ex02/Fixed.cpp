@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:07:53 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/12 13:21:19 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/12 14:27:47 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ Fixed& Fixed::operator = (const Fixed& src){
 	return (*this);
 }
 
-Fixed::~Fixed(){
-}
+Fixed::~Fixed(){}
 
 bool Fixed::operator > (const Fixed& src){
 	if (src._nb_value > this->_nb_value)
