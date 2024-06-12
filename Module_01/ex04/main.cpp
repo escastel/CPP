@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:51:55 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/10 17:48:04 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:41:57 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,15 @@ int main(int argc, char **argv)
 	if (argc < 4 || argc > 4)
 	{
 		std::cout << "Error: Wrong number of arguments" << std::endl;
+		return 1;
+	}
+	int	i;
+	std::string	str;
+	std::string	s1(argv[2]);
+	std::string s2(argv[3]);
+	if (s2.empty() || s1.empty())
+	{
+		std::cout << "Error: String cant be empty" << std::endl;
 		return 1;
 	}
 	std::ifstream infile;
@@ -35,10 +44,6 @@ int main(int argc, char **argv)
 		std::cout << "Error: Error creating file" << std::endl;
 		return 1;
 	}
-	int	i;
-	std::string	str;
-	std::string	s1(argv[2]);
-	std::string s2(argv[3]);
 	while(infile.good())
 	{
 		std::getline(infile, str);
