@@ -6,27 +6,27 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:07:53 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/12 17:59:41 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/12 18:09:28 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-const int Fixed::_fract_bits = 8;
+const int Fixed::_fractBits = 8;
 
 Fixed::Fixed(){
 	std::cout << "Default constructor called" << std::endl;
-	this->_nb_value = 0;
+	this->_nbValue = 0;
 }
 
 Fixed::Fixed(const int	in){
 	std::cout << "Int constructor called" << std::endl;
-	this->_nb_value = in << this->_fract_bits;
+	this->_nbValue = in << this->_fractBits;
 }
 
 Fixed::Fixed(const float ft){
 	std::cout << "Float constructor called" << std::endl;
-	this->_nb_value = roundf(ft * (1 << this->_fract_bits));
+	this->_nbValue = roundf(ft * (1 << this->_fractBits));
 }
 
 Fixed::Fixed(const Fixed& copy){
@@ -38,7 +38,7 @@ Fixed::Fixed(const Fixed& copy){
 Fixed& Fixed::operator = (const Fixed& src){
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
-		this->_nb_value = src.getRawBits();
+		this->_nbValue = src.getRawBits();
 	return (*this);
 }
 
@@ -47,37 +47,37 @@ Fixed::~Fixed(){
 }
 
 bool Fixed::operator > (const Fixed& src){
-	if (src._nb_value > this->_nb_value)
+	if (src._nbValue > this->_nbValue)
 		return (true);
 	return (false);
 }
 
 bool Fixed::operator < (const Fixed& src){
-	if (src._nb_value < this->_nb_value)
+	if (src._nbValue < this->_nbValue)
 		return (true);
 	return (false); 
 }
 
 bool Fixed::operator >= (const Fixed& src){
-	if (src._nb_value >= this->_nb_value)
+	if (src._nbValue >= this->_nbValue)
 		return (true);
 	return (false);
 }
 
 bool Fixed::operator <= (const Fixed& src){
-	if (src._nb_value <= this->_nb_value)
+	if (src._nbValue <= this->_nbValue)
 		return (true);
 	return (false);
 }
 
 bool Fixed::operator == (const Fixed& src){
-	if (src._nb_value == this->_nb_value)
+	if (src._nbValue == this->_nbValue)
 		return (true);
 	return (false);
 }
 
 bool Fixed::operator != (const Fixed& src){
-	if (src._nb_value != this->_nb_value)
+	if (src._nbValue != this->_nbValue)
 		return (true);
 	return (false);	
 }
@@ -101,40 +101,40 @@ Fixed Fixed::operator / (const Fixed& src){
 Fixed Fixed::operator ++ (int){
 	Fixed	obj(*this);
 	
-	this->_nb_value++;
+	this->_nbValue++;
 	return (obj);
 }
 
 Fixed Fixed::operator -- (int){
 	Fixed	obj(*this);
 	
-	this->_nb_value--;
+	this->_nbValue--;
 	return (obj);
 }
 Fixed& Fixed::operator ++ (void){
-	this->_nb_value++;
+	this->_nbValue++;
 	return (*this);
 }
 
 Fixed& Fixed::operator -- (void){
-	this->_nb_value--;
+	this->_nbValue--;
 	return (*this);
 }
 
 int	Fixed::toInt(void)const{
-	return (this->_nb_value >> this->_fract_bits);
+	return (this->_nbValue >> this->_fractBits);
 }
 
 float	Fixed::toFloat(void)const{
-	return (static_cast<float>(this->_nb_value) / (1 << this->_fract_bits));
+	return (static_cast<float>(this->_nbValue) / (1 << this->_fractBits));
 }
 
 int	Fixed::getRawBits(void) const{
-	return (this->_nb_value);
+	return (this->_nbValue);
 }
 
 void	Fixed::setRawBits(int const raw){
-	this->_nb_value = raw;
+	this->_nbValue = raw;
 }
 
 Fixed&	Fixed::min(Fixed& d1, Fixed& d2){

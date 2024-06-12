@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:08:10 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/12 13:17:11 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/12 18:09:31 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Fixed
 {
 	private:
-			int					_nb_value;
-			static int	const	_fract_bits;
+			int					_nbValue;
+			static int	const	_fractBits;
 	public:
 			Fixed();
 			Fixed(const int in);
