@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:51:26 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/11 13:25:17 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:36:23 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,21 @@ Contact::Contact(){
 
 void	Contact::saveContact(){
 
-	for (int i = 0; i < 5; i++)
+	int	i;
+
+	i = 0;
+	while (i < 5)
 	{
 		std::cout << _fields[i];
 		std::getline(std::cin, _data[i]);
-		if (_data[i].empty())
+		for (int j = 0; j < 1; j++)
 		{
-			std::cout << "Wrong input: Contact can’t have empty fields." << std::endl;
-			i--;
-			continue;
+			if (_data[i].empty())
+			{
+				std::cout << "Wrong input: Contact can’t have empty fields." << std::endl;
+				i--;
+				break;
+			}
 		}
 		if (i == 3)
 		{
@@ -41,10 +47,11 @@ void	Contact::saveContact(){
 				{
 					std::cout << "Wrong input: Phone Number must be a digit." << std::endl;
 					i--;
-					continue;
+					break;
 				}
 			}
 		}
+		i++;
 	}
 }
 
