@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:03:00 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/17 17:19:02 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/18 14:27:50 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ void	ClapTrap::takeDamage(unsigned int amount){
 			this->_hitPoints -= amount;
 		else
 			this->_hitPoints = 0;
-		std::cout << "HitPoints: " << this->_hitPoints << std::endl;
+		std::cout << "EnergyPoints: " << this->_energyPoints << ", HitPoints: " << this->_hitPoints << std::endl;
 	}
 	if (this->_hitPoints == 0)
-		std::cout << "ClapTrap is dead :(.\n HitPoints: " << this->_hitPoints << std::endl;
+		std::cout << "ClapTrap is dead :(.\nHitPoints: " << this->_hitPoints << std::endl;
 }
 void	ClapTrap::beRepaired(unsigned int amount){
 	if (this->_energyPoints && this->_hitPoints)
@@ -73,17 +73,17 @@ void	ClapTrap::beRepaired(unsigned int amount){
 	if (this->_energyPoints == 0)
 		std::cout << "ClapTrap does mot have enough energy points to repair itself.\nEnergyPoints: " << this->_energyPoints << std::endl;
 	if (this->_hitPoints == 0)
-		std::cout << "ClapTrap is dead, ClapTrap cannot be resurrected.\n HitPoints: " << this->_hitPoints << std::endl;
+		std::cout << "ClapTrap is dead, ClapTrap cannot be resurrected.\nHitPoints: " << this->_hitPoints << std::endl;
 }
 void	ClapTrap::attack(const std::string& target){
 	if (this->_energyPoints && this->_hitPoints)
 	{
 		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 		this->_energyPoints -= 1;
-		std::cout << "EnergyPoints: " << this->_energyPoints << std::endl;
+			std::cout << "EnergyPoints: " << this->_energyPoints << ", HitPoints: " << this->_hitPoints << std::endl;
 	}
 	if (this->_energyPoints == 0)
 		std::cout << "ClapTrap does not have enough energy points to attack " << target << ".\nEnergyPoints: " << this->_energyPoints << std::endl;
 	if (this->_hitPoints == 0)
-		std::cout << "ClapTrap is dead, ClapTrap cannot attack " << target << ".\n HitPoints: " << this->_hitPoints << std::endl;
+		std::cout << "ClapTrap is dead, ClapTrap cannot attack " << target << ".\nHitPoints: " << this->_hitPoints << std::endl;
 }
