@@ -6,11 +6,11 @@
 #    By: escastel <escastel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 15:06:44 by escastel          #+#    #+#              #
-#    Updated: 2024/06/18 15:14:33 by escastel         ###   ########.fr        #
+#    Updated: 2024/06/19 14:20:39 by escastel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = scavtrap
 
 FILES = main.cpp ClapTrap.cpp ScavTrap.cpp
 

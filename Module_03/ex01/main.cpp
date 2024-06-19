@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:02:41 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/18 16:59:20 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/19 14:16:03 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,10 @@ int	main(){
 	momo.takeDamage(6);
 	momo.beRepaired(4);
 	momo.takeDamage(20);
+	momo.attack("Coco");
+	momo.takeDamage(80);
+	momo.beRepaired(20);
+	momo.attack("Coco");
+	momo.takeDamage(6);
 	return 0;
 }
