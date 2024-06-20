@@ -6,13 +6,13 @@
 #    By: escastel <escastel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 15:06:44 by escastel          #+#    #+#              #
-#    Updated: 2024/06/20 15:02:13 by escastel         ###   ########.fr        #
+#    Updated: 2024/06/20 17:58:58 by escastel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = polymorphism
 
-FILES = main.cpp Animal.cpp Cat.cpp Dog.cpp
+FILES = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJECTS = $(FILES:%.cpp=obj/%.o)
 
