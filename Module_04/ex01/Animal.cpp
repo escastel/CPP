@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:19:30 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/20 15:02:34 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:21:36 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,8 @@ std::string	Animal::getType(void)const{
 
 void	Animal::makeSound(void)const{
 	std::cout << "Cri, cri, cri...*Nothing sounds*" << std::endl;
+}
+
+Brain*	Animal::getBrain(void)const{
+	return (NULL);
 }

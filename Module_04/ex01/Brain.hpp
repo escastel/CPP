@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 18:15:19 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/20 18:39:22 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:15:45 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Brain
 			Brain(const Brain& copy);
 			Brain& operator = (const Brain& src);
 			~Brain();
-			void		setIdea(std::string	idea);
-			std::string	getIdea(int	index);
+			void			setIdea(std::string	idea);
+			std::string		getIdea(int	index);
 };
 
 #endif

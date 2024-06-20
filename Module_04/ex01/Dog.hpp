@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:07:09 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/20 19:05:02 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:16:41 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog : public Animal
 			Dog(const Dog& copy);
 			Dog& operator = (const Dog& src);
 			~Dog();
-			Brain			*getBrain(void)const;
+			virtual Brain	*getBrain(void)const;
 			virtual void	makeSound(void)const;
 };
 
