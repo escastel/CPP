@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:58:51 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/19 15:17:15 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/20 12:58:32 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,15 @@ void	ScavTrap::attack(const std::string &target)
 			std::cout << "EnergyPoints: " << this->_energyPoints << ", HitPoints: " << this->_hitPoints << std::endl;
 	}
 	if (this->_energyPoints == 0)
-		std::cout << "ScavTrap does not have enough energy points to attack " << target << ".\n EnergyPoints: " << this->_energyPoints << std::endl;
+		std::cout << "ScavTrap " << this->_name << " does not have enough energy points to attack " << target << ".\n EnergyPoints: " << this->_energyPoints << std::endl;
 	if (this->_hitPoints == 0)
-		std::cout << "ScavTrap is dead, ScavTrap cannot attack " << target << ".\n HitPoints: " << this->_hitPoints << std::endl;
+		std::cout << "ScavTrap" << this->_name << " is dead, " << this->_name << " cannot attack " << target << ".\n HitPoints: " << this->_hitPoints << std::endl;
 }
 
 void	ScavTrap::guardGate(){
 	if (this->_energyPoints && this->_hitPoints)
-		std::cout << "ScavTrap is now in Gate keeper mode!" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode!" << std::endl;
 	if (this->_hitPoints == 0)
-		std::cout << "ScavTrap is dead, ScavTRap cannot be in Gate keeper." << ".\n HitPoints: " << this->_hitPoints << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is dead, " << this->_name << " cannot be in Gate keeper." << ".\n HitPoints: " << this->_hitPoints << std::endl;
 	
 }

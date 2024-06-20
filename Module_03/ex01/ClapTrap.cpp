@@ -6,9 +6,11 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:03:00 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/19 14:21:35 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/20 12:58:59 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ClapTrap.hpp"
 
 #include "ClapTrap.hpp"
 
