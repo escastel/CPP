@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 18:02:47 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/19 19:51:42 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/20 12:50:55 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap(){
 	std::cout << "DiamondTrap: Default constructor called" << std::endl;
 	this->_hitPoints = FragTrap::_hitPoints;
 	std::cout << "DiamondTrap: Initial HitPoints: " << this->_hitPoints << std::endl;
-	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_energyPoints = 50;
 	std::cout << "DiamondTrap: Initial EnergyPoints: " << this->_energyPoints << std::endl;
 	this->_attackDamage = FragTrap::_attackDamage;
 	std::cout << "DiamondTrap: Initial AttackDamage: " << this->_attackDamage << std::endl;
@@ -25,10 +25,9 @@ DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap(){
 DiamondTrap::DiamondTrap(std::string name): ScavTrap(name), FragTrap(name){
 	std::cout << "DiamondTrap: Name constructor called" << std::endl;
 	this->_name = name;
-	ClapTrap::_name = name + "_clap_name";
 	this->_hitPoints = FragTrap::_hitPoints;
 	std::cout << "DiamondTrap: Initial HitPoints: " << this->_hitPoints << std::endl;
-	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_energyPoints = 50;
 	std::cout << "DiamondTrap: Initial EnergyPoints: " << this->_energyPoints << std::endl;
 	this->_attackDamage = FragTrap::_attackDamage;
 	std::cout << "DiamondTrap: Initial AttackDamage: " << this->_attackDamage << std::endl;
@@ -60,5 +59,5 @@ void	DiamondTrap::attack(const std::string& target){
 	ScavTrap::attack(target);
 }
 void	DiamondTrap::whoAmI(){
-	std::cout << "DiamondTrap name is " << this->_name << " and ClapTrap name is " <<  ClapTrap::_name << std::endl;
+	std::cout << "DiamondTrap name is " << this->_name << " and ClapTrap name is " <<  ClapTrap::_name + "_clap_name" << std::endl;
 }
