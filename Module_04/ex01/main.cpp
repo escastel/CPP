@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:04:29 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/20 19:19:12 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/21 13:01:16 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 #include "WrongCat.hpp"
 #include "Brain.hpp"
 
-/* int	main()
-{
-	const Cat *lol = new Cat();
-	Brain* hola = lol->getBrain();
-	hola->setIdea("meow");
-	std::cout << hola->getIdea(0) << std::endl;
-	delete lol;
-} */
 int main()
 {
 	const Animal* animals[4] = {new Cat(), new Cat(), new Dog(), new Dog()};
