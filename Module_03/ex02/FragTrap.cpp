@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 14:38:39 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/19 15:28:14 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/21 13:45:39 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 FragTrap::FragTrap(): ClapTrap(){
 	std::cout << "FragTrap: Default constructor called" << std::endl;
+	this->_name = "Default";
 	this->_hitPoints = 100;
 	std::cout << "FragTrap: Initial HitPoints: " << this->_hitPoints << std::endl;
 	this->_energyPoints = 100;

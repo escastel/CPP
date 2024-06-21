@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 18:02:47 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/20 12:59:56 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/21 13:45:59 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap(){
 	std::cout << "DiamondTrap: Default constructor called" << std::endl;
+	this->_name = "Default";
 	this->_hitPoints = FragTrap::_hitPoints;
 	std::cout << "DiamondTrap: Initial HitPoints: " << this->_hitPoints << std::endl;
 	this->_energyPoints = 50;
