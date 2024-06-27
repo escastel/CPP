@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 13:08:57 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/27 18:07:59 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/27 18:33:36 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int main()
 	src->learnMateria(new Cure());
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
- 	/* src->learnMateria(new Cure()); */
+ 	/* src->learnMateria(new Cure());
+	src->learnMateria(new Cure()); */
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
