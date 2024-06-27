@@ -6,15 +6,15 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 13:05:08 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/25 17:59:42 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/27 17:17:53 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_HPP
 # define MATERIASOURCE_HPP
-# include "AMateria.hpp"
+# include "IMateriaSource.hpp"
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 	private:
 			AMateria*	_copy[4];
@@ -22,9 +22,9 @@ class MateriaSource
 			MateriaSource();
 			MateriaSource(const MateriaSource& copy);
 			MateriaSource& operator = (const MateriaSource& src);
-			virtual ~MateriaSource();
-			virtual void 		learnMateria(AMateria* learn) = 0;
-			virtual AMateria*	createMateria(std::string const & type) = 0;
+			~MateriaSource();
+			void 		learnMateria(AMateria* learn);
+			AMateria*	createMateria(std::string const & type);
 };
 
 #endif
