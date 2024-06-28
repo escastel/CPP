@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:52:23 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/10 16:04:57 by escastel         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:03:51 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Weapon::Weapon(std::string type){
 };
 Weapon::~Weapon(){};
 
-std::string& Weapon::getType(void){
+const std::string& Weapon::getType(void){
 	std::string& type = this->type;
 	return (type);
 }
