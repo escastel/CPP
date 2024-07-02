@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:30:38 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/11 13:26:18 by escastel         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:17:38 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ void	PhoneBook::searchContact(){
 		while (1)
 		{
 			std::cout << "Choose contact index: ";
-			std::getline(std::cin, input);
+			if (!std::getline(std::cin, input))
+				return ;
 			if (input[0] >= '1' && input[0] <= '8' && !input[1])
 			{
 				int	input_index = (input[0] - '1');
@@ -73,7 +74,11 @@ void	PhoneBook::pbSoftware(){
 		std::cout << "             »»————————- SEARCH     ————————-««" << std::endl;
 		std::cout << "             »»————————- EXIT       ————————-««\n" << std::endl;
 		std::cout << "→ WRITE YOUR OPTION: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+		{
+			std::cout << "\nError: Problem with funtion getline" << std::endl;
+			return ;
+		}
 		if (input == "EXIT")
 			break ;
 		if (input == "ADD")

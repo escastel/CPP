@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 15:51:26 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/12 17:36:23 by escastel         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:13:05 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void	Contact::saveContact(){
 	while (i < 5)
 	{
 		std::cout << _fields[i];
-		std::getline(std::cin, _data[i]);
+		if (!std::getline(std::cin, _data[i]))
+			break ;
 		for (int j = 0; j < 1; j++)
 		{
 			if (_data[i].empty())
