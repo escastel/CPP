@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:51:55 by escastel          #+#    #+#             */
-/*   Updated: 2024/07/02 19:20:47 by escastel         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:08:09 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 		if (!std::getline(infile, str))
 		{
 			std::cout << "Error: Problem with funtion getline" << std::endl;
-			return ;
+			return 1;
 		}
 		while ((i = str.find(s1)) != -1)
 		{
