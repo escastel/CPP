@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:08:10 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/12 18:07:43 by escastel         ###   ########.fr       */
+/*   Updated: 2024/07/11 16:19:15 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Fixed
 			Fixed(const	Fixed& copy);
 			Fixed& operator = (const Fixed& src);
 			~Fixed();
-
 			int getRawBits(void)const;
 			void setRawBits(int const raw);
 };

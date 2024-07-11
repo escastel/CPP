@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:07:53 by escastel          #+#    #+#             */
-/*   Updated: 2024/06/12 18:09:10 by escastel         ###   ########.fr       */
+/*   Updated: 2024/07/10 12:25:50 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int	Fixed::getRawBits(void) const{
 }
 
 void	Fixed::setRawBits(int const raw){
+	std::cout << "setRawBits member function called" << std::endl;
 	this->_nbValue = raw;
 }
