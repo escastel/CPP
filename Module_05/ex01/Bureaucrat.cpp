@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:24:50 by escastel          #+#    #+#             */
-/*   Updated: 2024/10/09 18:39:37 by escastel         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:07:20 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ void	Bureaucrat::signForm(Form &signature){
 	{
 		signature.beSigned(*this);
 		if (signature.getSigned() == true)
-			std::cout << this->_name << " signed " << signature.getName() << std::endl;
+			std::cout << this->_name << " signed " << signature.getName() << "." << std::endl;
 		else
 			std::cout << this->_name << " couldn’t sign " << signature.getName() << " because bureaucrat’s grade isn't high enough."<< std::endl;	
 	}
 	else
-		std::cout << this->_name << " signed " << signature.getName() << std::endl;
+		std::cout << this->_name << " signed " << signature.getName() << "." << std::endl;
 }
 
 void	Bureaucrat::incrementGrade(){

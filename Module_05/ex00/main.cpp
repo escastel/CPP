@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:24:48 by escastel          #+#    #+#             */
-/*   Updated: 2024/10/09 18:24:01 by escastel         ###   ########.fr       */
+/*   Updated: 2024/10/11 17:17:01 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(void)
 	{
         std::cerr << e.what() << std::endl;
     }
-
+    std::cout <<"\n\n------------------------\n\n" << std::endl;
     try 
 	{
         Bureaucrat bureaucrat1("Mondongo", 1);
@@ -36,7 +36,7 @@ int main(void)
 	{
         std::cerr << e.what() << std::endl;
     }
-	
+	std::cout <<"\n\n------------------------\n\n" << std::endl;
     try 
 	{
         Bureaucrat bureaucrat2("Vohue", 150);

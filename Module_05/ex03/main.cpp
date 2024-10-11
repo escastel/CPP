@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:24:48 by escastel          #+#    #+#             */
-/*   Updated: 2024/10/11 17:12:24 by escastel         ###   ########.fr       */
+/*   Updated: 2024/10/11 17:23:34 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ int main(void)
 
         scf = someRandomIntern.makeForm("shrubbery creation", "Mango");
         std::cout << *scf << std::endl;
+        std::cout << "Sign form: ";
         bureaucrat.signForm(*scf);
+        std::cout << "Execute form: ";
         bureaucrat.executeForm(*scf);
         std::cout << *scf << std::endl;
         delete scf;
@@ -39,7 +41,9 @@ int main(void)
 
         rrf = someRandomIntern.makeForm("robotomy request", "Mondongo");
         std::cout << *rrf << std::endl;
+        std::cout << "Sign form: ";
         bureaucrat.signForm(*rrf);
+        std::cout << "Execute form: ";
         bureaucrat.executeForm(*rrf);
         std::cout << *rrf << std::endl;
         delete rrf;
@@ -52,14 +56,16 @@ int main(void)
 
         ppf = someRandomIntern.makeForm("presidential pardon", "Vohue");
         std::cout << *ppf << std::endl;
+        std::cout << "Sign form: ";
         bureaucrat.signForm(*ppf);
+        std::cout << "Execute form: ";
         bureaucrat.executeForm(*ppf);
         std::cout << *ppf << std::endl;
         delete ppf;
     }
     std::cout <<"\n\n------------------------\n\n" << std::endl;
     {
-        Intern      someRandomIntern;
+        Intern  someRandomIntern;
         AForm*  errorf;
 
         errorf = someRandomIntern.makeForm("Robotomy Request", "Huevo");

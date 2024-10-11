@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:36:39 by escastel          #+#    #+#             */
-/*   Updated: 2024/10/09 18:32:13 by escastel         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:07:03 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ Form::Form(const Form& copy): _name(copy._name), _gradeSign(copy._gradeSign), _g
 }
 
 Form& Form::operator = (const Form& src){
-	this->_signed = getSigned();
 	if (this != &src)
 	{
+		this->_signed = getSigned();
 		if (src._gradeSign > 150 || src._gradeExecute > 150)
 			throw Form::GradeTooLowException();
 		if (src._gradeSign < 1 || src._gradeExecute < 1)
@@ -53,15 +53,19 @@ Form::~Form(){}
 std::string const	Form::getName() const{
 	return (this->_name);
 }
+
 int		Form::getGradeSign() const{
 	return (this->_gradeSign);
 }
+
 int		Form::getGradeExecute() const{
 	return (this->_gradeExecute);
 }
+
 bool	Form::getSigned() const{
 	return (this->_signed);
 }
+
 void	Form::beSigned(Bureaucrat &bureaucrat){
 	if (bureaucrat.getGrade() > this->_gradeSign)
 		throw Form::GradeTooLowException();
@@ -78,5 +82,5 @@ const char	*Form::GradeTooHighException::what() const throw()
 }
 
 std::ostream&	operator<<(std::ostream &out, const Form &src){
-	return (out << src.getName() << ", form grade required to sign it " << src.getGradeSign() << ", grade required to execute it " << src.getGradeExecute() << " actual status: " << src.getSigned() << ".");	
+	return (out << src.getName() << ", form grade required to sign it " << src.getGradeSign() << ", grade required to execute it " << src.getGradeExecute() << " signature actual status: " << src.getSigned() << ".");	
 }

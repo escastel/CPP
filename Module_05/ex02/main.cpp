@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:24:48 by escastel          #+#    #+#             */
-/*   Updated: 2024/10/11 14:04:41 by escastel         ###   ########.fr       */
+/*   Updated: 2024/10/11 17:22:29 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int main(void)
         ShrubberyCreationForm   scf("Nacho");
         std::cout << bureaucrat << std::endl;
         std::cout << scf << std::endl;
+        std::cout << "Sign form: ";
         bureaucrat.signForm(scf);
+        std::cout << "Execute form: ";
         bureaucrat.executeForm(scf);
         std::cout << scf << std::endl;
     }
@@ -38,7 +40,9 @@ int main(void)
         RobotomyRequestForm     rrf("Mondongo");
         std::cout << bureaucrat1 << std::endl;
         std::cout << rrf << std::endl;
+        std::cout << "Sign form: ";
         bureaucrat1.signForm(rrf);
+        std::cout << "Execute form: ";
         bureaucrat1.executeForm(rrf);
         std::cout << rrf << std::endl;
     }
@@ -53,7 +57,9 @@ int main(void)
         PresidentialPardonForm      ppf("Vohue");
         std::cout << bureaucrat2 << std::endl;
         std::cout << ppf << std::endl;
+        std::cout << "Sign form: ";
         bureaucrat2.signForm(ppf);
+        std::cout << "Execute form: ";
         bureaucrat2.executeForm(ppf);
         std::cout << ppf << std::endl;
     }
