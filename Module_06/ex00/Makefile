@@ -6,13 +6,13 @@
 #    By: escastel <escastel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 15:06:44 by escastel          #+#    #+#              #
-#    Updated: 2024/11/20 15:21:25 by escastel         ###   ########.fr        #
+#    Updated: 2024/11/22 12:59:08 by escastel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = scalarConvert
 
-FILES = main.cpp 
+FILES = main.cpp ScalarConverter.cpp
 
 OBJECTS = $(FILES:%.cpp=obj/%.o)
 
@@ -28,7 +28,7 @@ $(OBJECTS):	obj/%.o : %.cpp
 			@ c++ $(FLAGS) -c $< -o $@
 
 clean:
-			@ rm -rf $(OBJECTS) obj *_shrubbery
+			@ rm -rf $(OBJECTS) obj
 
 fclean:		clean
 			@ rm -rf $(NAME)

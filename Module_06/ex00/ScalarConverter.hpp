@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:46:08 by escastel          #+#    #+#             */
-/*   Updated: 2024/11/20 15:12:58 by escastel         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:08:27 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <cstring>
 # include <climits>
 # include <cstdlib>
+# include <limits>
+# include <math.h>
 
 enum	scalarTypes
 {
