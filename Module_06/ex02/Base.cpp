@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 02:58:17 by escastel          #+#    #+#             */
-/*   Updated: 2024/12/15 03:16:24 by escastel         ###   ########.fr       */
+/*   Updated: 2024/12/15 03:20:13 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ Base::~Base() {}
 
 Base	*generate()
 {
-	std::srand(time(NULL));
+	std::srand(time(0));
 	int		random = (std::rand() % 3);
 
-	std::cout << random << std::endl;
 	if (random == 0)
 		return new A();
 	else if (random == 1)
