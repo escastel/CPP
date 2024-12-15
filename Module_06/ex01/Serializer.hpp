@@ -1,44 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 19:46:08 by escastel          #+#    #+#             */
-/*   Updated: 2024/12/15 01:24:50 by escastel         ###   ########.fr       */
+/*   Created: 2024/12/15 02:36:28 by escastel          #+#    #+#             */
+/*   Updated: 2024/12/15 02:50:24 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-# define SCALARCONVERTER_HPP
+#ifndef SERIALIZER_HPP
+# define SERIALIZER_HPP
 # include <iostream>
 # include <string.h>
-# include <cstring>
-# include <climits>
-# include <cstdlib>
-# include <limits>
-# include <math.h>
-# include <iomanip> 
+# include <stdint.h>
 
-enum	scalarTypes
+struct Data
 {
-	CHAR,
-	INT,
-	FLOAT,
-	DOUBLE,
-	PLDF,
+	std::string	type;
 };
 
-class ScalarConverter
+class Serializer
 {
 	private:
-			ScalarConverter();
-			ScalarConverter(const ScalarConverter& copy);
-			ScalarConverter& operator = (const ScalarConverter& src);
+			Serializer();
+			Serializer(const Serializer& copy);
+			Serializer& operator = (const Serializer& src);
 	public:
-			~ScalarConverter();	
-			static void	convert(std::string str);
+			~Serializer();
+			static uintptr_t serialize(Data* ptr);
+			static Data* deserialize(uintptr_t raw);
 };
 
 #endif

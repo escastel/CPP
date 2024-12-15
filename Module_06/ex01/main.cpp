@@ -5,20 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/15 02:36:12 by escastel          #+#    #+#             */
-/*   Updated: 2024/12/15 02:36:13 by escastel         ###   ########.fr       */
+/*   Created: 2024/12/15 02:36:20 by escastel          #+#    #+#             */
+/*   Updated: 2024/12/15 02:52:11 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Serializer.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
-	if (argc != 2)
-	{
-		std::cerr << "Error! No arguments" << std::endl;
-		return 1;
-	}
- 	ScalarConverter::convert(argv[1]);
+	Data	*data = new Data();
+	data->type = "My data";
+	uintptr_t	serializedData = Serializer::serialize(data);
+	Data	*deserializedData = Serializer::deserialize(serializedData);
+	
+	std::cout << "Data: " << data->type << std::endl;
+	std::cout << "Serialized data: " << serializedData << std::endl;
+	std::cout << "Deserialized data: " << deserializedData->type << std::endl;
+	
+	delete data;
 	return 0;
 }
