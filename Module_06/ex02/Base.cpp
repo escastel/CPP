@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 02:58:17 by escastel          #+#    #+#             */
-/*   Updated: 2024/12/15 03:20:13 by escastel         ###   ########.fr       */
+/*   Updated: 2024/12/16 18:51:37 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,24 @@ void	identify(Base *p)
 		std::cout << "Pointer C" << std::endl;
 }
 
-void	identify(Base &p){ identify(&p); }
+void	identify(Base &p){
+	try {
+		A &a = dynamic_cast<A &>(p);
+		(void)a;
+		std::cout << "Reference A" << std::endl;
+	} catch (std::exception &e) {
+		try {
+			B &b = dynamic_cast<B &>(p);
+			(void)b;
+			std::cout << "Reference B" << std::endl;
+		} catch (std::exception &e) {
+			try {
+				C &c = dynamic_cast<C &>(p);
+				(void)c;
+				std::cout << "Reference C" << std::endl;
+			} catch (std::exception &e) {
+				std::cout << "Unverifiable" << std::endl;
+			}
+		}
+	}
+}
