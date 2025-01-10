@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:34:28 by escastel          #+#    #+#             */
-/*   Updated: 2025/01/08 17:35:54 by escastel         ###   ########.fr       */
+/*   Updated: 2025/01/10 12:57:23 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,18 @@ void	BitcoinExchange::saveData(){
 }
 
 void	BitcoinExchange::printResult(std::string str){
-	std::map<std::string, float>::iterator it;
+	std::map<std::string, float>::iterator it = this->data.begin();
 	std::string								date = str.substr(0, str.find('|') - 1);
 	float 									coins = atof(str.substr(str.find('|') + 1, str.length()).c_str());
 	
-	it = this->data.find(date);
-	if (it == this->data.end())
+	if (date < it->first)
 		std::cout << "Error: data not found." << std::endl;
-	else
-		std::cout << date << " => " << coins << " = " << coins * it->second << std::endl; 
+	else {
+		it = this->data.lower_bound(date);
+		if (it->first != date)
+			it--;
+		std::cout << date << " => " << coins << " = " << coins * it->second << std::endl; 	
+	}
 }
 
 static int	checkCoins(std::string coins){
