@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:05:13 by escastel          #+#    #+#             */
-/*   Updated: 2025/01/10 17:54:14 by escastel         ###   ########.fr       */
+/*   Updated: 2025/01/13 13:42:02 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,18 @@ class PmergeMe
 			std::vector<long int>	vector;
 			PmergeMe();
 	public:
-			PmergeMe(std::string arg[]);
+			PmergeMe(char **arg);
 			PmergeMe(const PmergeMe& src);
 			PmergeMe&	operator = (const PmergeMe& copy);
 			~PmergeMe();
-			int		checkArg(std::string arg[]);
-			void	saveData(std::string arg[]);
+			int		checkArg(char **arg);
+			void	saveData(char **arg);
+			void	takeTime();
+			void	printList();
 			void	sortList(std::list<long int>::iterator p_it, std::list<long int>::iterator r_it);
 			void	sortVector(std::vector<long int>::iterator p_it, std::vector<long int>::iterator r_it);
 			void	mergeList(std::list<long int>::iterator p_it, std::list<long int>::iterator r_it, std::list<long int>::iterator q_it);
 			void	mergeVector(std::vector<long int>::iterator p_it, std::vector<long int>::iterator r_it, std::vector<long int>::iterator q_it);
-			void	insertionList(std::list<long int>::iterator p_it, std::list<long int>::iterator r_it);
-			void	insertionVector(std::vector<long int>::iterator p_it, std::vector<long int>::iterator r_it);
 };
 
 #endif
